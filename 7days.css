@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f1f1f1;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h3 {
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.weather-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.weather-card {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.weather-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 10px auto;
+}
+
+.details {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+#temperature {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e63946;
+}
+
+#rainfall {
+    color: blue;
+}
+
+#humidity {
+    color: green;
+}
+
+#wind-speed {
+    color: orange;
+}
+
+/* Add additional styles for a cohesive look */
+.container-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: center;
+}
+
+.weather__units {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.weather__units span {
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 10px;
+    color: #555;
+    transition: color 0.3s ease-in-out;
+}
+
+.weather__units span:hover {
+    color: #e63946;
+}
+
+.weather__units span.active {
+    color: #e63946;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .weather-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .weather__units span {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+
+    #temperature {
+        font-size: 20px;
+    }
+}
